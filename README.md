@@ -21,11 +21,15 @@ Para testar em localhost:
 `docker build -t nodeserver:001 .`
 
 - ...criando os container a partir das imagens criadas
-`docker container run -p 5001:5000 --name customized1 -e "name=node 001" -d nodeserver:001`
-`docker container run -p 5002:5000 --name customized2 -e "name=node 002" -d nodeserver:001`
-`docker container run -p 5003:5000 --name customized3 -e "name=node 003" -d nodeserver:001`
+- `docker container run -p 5001:5000 --name customized1 -e "name=node 001" -d nodeserver:001`
+- `docker container run -p 5002:5000 --name customized2 -e "name=node 002" -d nodeserver:001`
+- `docker container run -p 5003:5000 --name customized3 -e "name=node 003" -d nodeserver:001`
 
 - ...criando balanceamento de carga
-`cd balance`
-`docker build -t nginxbalancer:001 .`
-`docker container run -p 5000:80 -d nginxbalancer:001`
+- `cd balance`
+- `docker build -t nginxbalancer:001 .`
+- `docker container run -p 5000:80 -d nginxbalancer:001`
+
+## O grupo:
+- Igor Carvalho: https://github.com/igorecarvalho
+- Victor Hugo Landin: https://github.com/vhal9
